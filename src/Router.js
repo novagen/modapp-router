@@ -15,18 +15,21 @@ import * as obj from 'modapp-utils/obj';
  */
 
 /**
+ * Router components object
+ * @typedef {object} module/Router~components
+ * @property {object.<string, modapp~Component}
+ */
+
+/**
  * Route definition object
  * @typedef {object} module/Router~routeDefinition
  * @property {string} id Id of the route. Dot separated for sub routes.
+ * @property {(Router~components|{modapp~Component})} component An object containing components the route uses, can be a single component.
  * @property {string|class/LocaleString} name Display name of a route
  * @property {object=} [params.staticRouteParams] Optional params that is ensured to exist when a route is set.
  * 												  Caller may override these parameters by using the same keys.
  * @property {?string} [icon] Optional icon name
  * @property {string} [parentId] Option id of parent route
- * @property {module:modapp~Component} component Main component.
- * @property {?module:modapp~Component} asideComponent Aside component, if null the default component will be shown.
- * @property {?module:modapp~Component} headerComponent Header component, if null the default component will be shown.
- * @property {?module:modapp~Component} footerComponent Footer component, if null the default component will be shown.
  * @property {module/Router~setStateCallback} [setState] Set state callback. Params will be ignored if not set.
  * @property {module/Router~onBeforeUnload} [onBeforeUnload] On before unload callback. Params will be ignored if not set.
  */
