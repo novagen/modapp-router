@@ -1,3 +1,5 @@
+[![view on npm](http://img.shields.io/npm/v/modapp-router.svg)](https://www.npmjs.org/package/modapp-router)
+
 # modapp-router
 A router module to use in modapp based web applications
 
