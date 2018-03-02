@@ -1,7 +1,7 @@
 # modapp-router
 A router module to use in modapp based web applications
 
-###Usage
+### Usage
 Include the module in your `main.js`.
 
 ```javascript
