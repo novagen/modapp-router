@@ -20,3 +20,28 @@ window.app.loadBundle(modules)
 		window.app.render(document.body);
 	});
 ```
+
+Load the router in your module constructor
+
+```javascript
+this.app.require([ 'router' ], this._init.bind(this));
+```
+
+And register a new route to the module when initializing
+
+```javascript
+this.module.router.addRoute({
+	id: routeId,
+	name: l10n.t('module.example', `Example`),
+	parentId: null,
+	order: 20,
+	setState: this._setState, // method to set values passed from parseUrl
+	component: new ExampleComponent(this.app, this.module), // component to load
+	getUrl: (params) => { // method that builds the URL from parameters
+		return;
+	},
+	parseUrl: (data) => { // method that parses the parameters from the URL
+		return {};
+	}
+});
+```
